@@ -212,8 +212,8 @@ export function storageContract(label: string, make: () => Promise<StorageAdapte
       } finally { await b.close(); }
     });
 
-    it('rejects an import that is not a Scroganize export', async () => {
-      await expect(a.importAll({ format: 'something-else', version: 1 } as unknown as ExportBundle)).rejects.toThrow(/not a Scroganize export/);
+    it('rejects an import that is not a Scrollganizer export', async () => {
+      await expect(a.importAll({ format: 'something-else', version: 1 } as unknown as ExportBundle)).rejects.toThrow(/not a Scrollganizer export/);
     });
 
     it('wipe removes everything and the adapter can be reused', async () => {

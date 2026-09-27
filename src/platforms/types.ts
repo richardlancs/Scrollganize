@@ -1,4 +1,4 @@
-// The platform adapter contract: everything a social platform must provide so the rest of Scroganize (storage, search,
+// The platform adapter contract: everything a social platform must provide so the rest of Scrollganizer (storage, search,
 // sync, UI) never has to know which platform a video came from. No chrome.* and no DOM here: adapters' `parse` must run in
 // plain Node under Vitest. See docs/ADDING_A_PLATFORM.md.
 

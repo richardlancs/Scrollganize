@@ -148,7 +148,7 @@ export function App() {
           </svg>
         </span>
         <div>
-          <h1>Scroganize</h1>
+          <h1>Scrollganizer</h1>
           <p class="muted">Search the videos you saved.</p>
         </div>
       </header>

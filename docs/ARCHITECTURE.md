@@ -1,6 +1,6 @@
 # Architecture
 
-Scroganize is a Chrome (Manifest V3) extension that makes the videos you saved on social media searchable. TikTok is the first platform; everything platform-specific sits behind one adapter interface. Everything runs on your machine: there is no server and no network access of its own.
+Scrollganizer is a Chrome (Manifest V3) extension that makes the videos you saved on social media searchable. TikTok is the first platform; everything platform-specific sits behind one adapter interface. Everything runs on your machine: there is no server and no network access of its own.
 
 ## 1. The pieces and who talks to whom
 

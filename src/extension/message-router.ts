@@ -42,7 +42,7 @@ export function createMessageRouter(deps: RouterDeps): (message: unknown, sender
       const request = (message as unknown as RuntimeMessage).request;
       const id = isObject(request) && typeof request.id === 'string' ? request.id : '';
       const fromOurPage = sender.id === deps.ownExtensionId && sender.origin === deps.extensionOrigin;
-      if (!fromOurPage) return Promise.resolve({ v: RPC_VERSION, id, ok: false, error: { code: 'BAD_REQUEST', message: 'database RPC is only available to Scroganize pages' } } satisfies RpcResponse);
+      if (!fromOurPage) return Promise.resolve({ v: RPC_VERSION, id, ok: false, error: { code: 'BAD_REQUEST', message: 'database RPC is only available to Scrollganizer pages' } } satisfies RpcResponse);
       return deps.handleDb(request);
     }
     return undefined;

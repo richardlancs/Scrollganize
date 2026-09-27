@@ -6,6 +6,6 @@ import type { Transport } from './client';
 export const chromeTransport: Transport = async (request) => {
   const message: RuntimeMessage = { target: 'db', request };
   const response = (await chrome.runtime.sendMessage(message)) as RpcResponse | undefined;
-  if (!response) throw new Error('no response from the Scroganize background (is the extension enabled?)');
+  if (!response) throw new Error('no response from the Scrollganizer background (is the extension enabled?)');
   return response;
 };

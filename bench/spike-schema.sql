@@ -1,4 +1,4 @@
--- Scroganize candidate schema (M0 draft; finalized after the spike numbers are reviewed).
+-- Scrollganizer candidate schema (M0 draft; finalized after the spike numbers are reviewed).
 --
 -- Design notes
 --  * Integer surrogate keys: items.id is the FTS rowid, keeps join indexes small.

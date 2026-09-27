@@ -1,4 +1,4 @@
-# Build "Scroganize": a Chrome extension that makes your saved social-media posts searchable
+# Build "Scrollganizer": a Chrome extension that makes your saved social-media posts searchable
 
 ## 0. How to work
 
@@ -300,7 +300,7 @@ Measured on a synthetic 50k-item library (generate with a seeded script, realist
 - **M6: Harden + docs.** Error/empty states, drift warning, export/import/wipe, perf bench in CI, `ARCHITECTURE.md`, `ADDING_A_PLATFORM.md`, README. Show me the related-terms file for review.
 
 ## 13. Defaults I've assumed (tell me if any are wrong)
-Chrome desktop only · library size 500 to 50k videos · chips AND together by default (`mode:'any'` available) · chip removal is staged until Search is pressed · chips are plain-text categories only · English-first related-terms list but nothing may break on other languages · "saved date" may be unavailable, so "recently saved" uses collection order · no thumbnail caching in v1 · single TikTok account at a time · the extension name and folder are "Scroganize".
+Chrome desktop only · library size 500 to 50k videos · chips AND together by default (`mode:'any'` available) · chip removal is staged until Search is pressed · chips are plain-text categories only · English-first related-terms list but nothing may break on other languages · "saved date" may be unavailable, so "recently saved" uses collection order · no thumbnail caching in v1 · single TikTok account at a time · the extension name and folder are "Scrollganizer".
 
 ## 14. Definition of done
 All milestone acceptance criteria met · perf budgets met and reported · no `core/` or `ui/` reference to TikTok · no TikTok endpoint/field name in code that isn't backed by a fixture and `TIKTOK_FINDINGS.md` · docs written · final message summarizing what was built, measured numbers, known limitations, and the top 5 risks (especially TikTok drift and related-terms false positives).
