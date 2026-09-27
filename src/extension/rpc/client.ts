@@ -82,4 +82,4 @@ export function createClient(send: Transport) {
   };
 }
 
-export type ScroganizeClient = ReturnType<typeof createClient>;
+export type ScrollganizerClient = ReturnType<typeof createClient>;

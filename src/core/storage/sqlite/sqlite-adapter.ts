@@ -207,7 +207,7 @@ export class SqliteAdapter implements StorageAdapter {
   }
 
   async importAll(bundle: ExportBundle): Promise<void> {
-    if (bundle?.format !== 'scroganize-export' || bundle.version !== 1) throw new Error('not a Scroganize export (unknown format/version)');
+    if (bundle?.format !== 'scroganize-export' || bundle.version !== 1) throw new Error('not a Scrollganizer export (unknown format/version)');
     if (bundle.schemaVersion > schemaVersion(this.db)) throw new Error(`export was written by a newer schema (v${bundle.schemaVersion})`);
     this.dataVersion++;
     try { this.importSync(bundle); } catch (e) { this.tagIds.clear(); throw e; }

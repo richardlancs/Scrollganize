@@ -13,7 +13,7 @@ export const MIGRATIONS: readonly Migration[] = [
     version: 1,
     name: 'init',
     sql: `
--- Scroganize schema v1 (M1). Design evidence: docs/STORAGE_SPIKE.md, docs/TIKTOK_FINDINGS.md.
+-- Scrollganizer schema v1 (M1). Design evidence: docs/STORAGE_SPIKE.md, docs/TIKTOK_FINDINGS.md.
 --  * Integer surrogate key: items.id is also the FTS rowid. (platform, external_id) is the natural key adapters upsert on.
 --  * Counts are INTEGER and times are epoch-ms so sort / range filters use indexes.
 --  * No stored url (derived by the platform adapter) and raw_json is NULL unless a platform opts in.
@@ -103,7 +103,7 @@ CREATE VIRTUAL TABLE items_fts USING fts5 (
     version: 2,
     name: 'meta',
     sql: `
--- Scroganize schema v2 (M3 review). Key/value metadata. Currently holds the account binding ("account.<platform>"), so the binding
+-- Scrollganizer schema v2 (M3 review). Key/value metadata. Currently holds the account binding ("account.<platform>"), so the binding
 -- lives in the same database, and the same transactions, as the data it protects: wipe and import clear or restore it atomically.
 CREATE TABLE meta (
   key   TEXT PRIMARY KEY,

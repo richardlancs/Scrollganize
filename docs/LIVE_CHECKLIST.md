@@ -1,6 +1,6 @@
 # Live checklist: what only your real TikTok account can confirm
 
-Everything in Scroganize was built and tested against a **mock TikTok** that reproduces the response shapes and quirks observed in M0 (`docs/TIKTOK_FINDINGS.md`). Your real account was never touched during the build. This list is the short set of things the mock cannot prove. Each item says what to do, what you should see, and what to tell me if it does not match. Nothing here deletes anything on TikTok; the extension only reads.
+Everything in Scrollganizer was built and tested against a **mock TikTok** that reproduces the response shapes and quirks observed in M0 (`docs/TIKTOK_FINDINGS.md`). Your real account was never touched during the build. This list is the short set of things the mock cannot prove. Each item says what to do, what you should see, and what to tell me if it does not match. Nothing here deletes anything on TikTok; the extension only reads.
 
 Status legend: `[ ]` not yet checked, `[x]` confirmed, `[!]` did not match (write what happened next to it).
 
@@ -8,13 +8,13 @@ Status legend: `[ ]` not yet checked, `[x]` confirmed, `[!]` did not match (writ
 
 - [ ] `npm run build`, then in Chrome open `chrome://extensions`, turn on Developer mode, **Load unpacked**, choose `.output/chrome-mv3`.
 - [ ] Be signed in to TikTok in that Chrome profile. Use your own account only.
-- [ ] Click the Scroganize toolbar button: the side panel opens. Optional: start from an empty library (the panel's footer, "Wipe library", asks twice).
+- [ ] Click the Scrollganizer toolbar button: the side panel opens. Optional: start from an empty library (the panel's footer, "Wipe library", asks twice).
 
 ## 1. Passive capture (M3)
 
 Browse your own profile's **Favorites** the way you normally would, scroll a little, open a collection.
 
-- [ ] **Videos arrive.** The panel's video count grows as you browse and the videos are searchable. For the details: open `chrome://extensions`, click "service worker" under Scroganize, and in its console run `(await chrome.storage.local.get('scroganize.captureStatus'))['scroganize.captureStatus']`. Look at `pages`, `items`, `rejected`, `viewerHandle`.
+- [ ] **Videos arrive.** The panel's video count grows as you browse and the videos are searchable. For the details: open `chrome://extensions`, click "service worker" under Scrollganizer, and in its console run `(await chrome.storage.local.get('scroganize.captureStatus'))['scroganize.captureStatus']`. Look at `pages`, `items`, `rejected`, `viewerHandle`.
 - [ ] **Nothing is refused for your own pages.** `rejected` should be empty. If you see `identity_unknown`, `not_own_profile` or `owner_mismatch` while on your own profile, the identity checks read the site differently than assumed: tell me which, and the URL you were on.
 - [ ] **Identity source.** Confirm the page's `__UNIVERSAL_DATA_FOR_REHYDRATION__` script still contains `webapp.app-context.user.uniqueId` (your handle) and `.uid` (a long number). (`viewerId` in the status should be that number.)
 - [ ] **Other people are refused.** Open someone else's profile or public collection: the status must not gain any of their videos (`rejected.not_own_profile` goes up).

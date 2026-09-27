@@ -9,7 +9,7 @@ npm run build
 
 1. In Chrome open `chrome://extensions` and turn on **Developer mode** (top right).
 2. Click **Load unpacked** and choose the folder `.output/chrome-mv3`.
-3. Pin the Scroganize icon if you like. Clicking it opens the side panel.
+3. Pin the Scrollganizer icon if you like. Clicking it opens the side panel.
 
 Use a normal Chrome window where you are (or will be) signed in to TikTok with **your own** account.
 
@@ -19,7 +19,7 @@ There are two ways, and they combine.
 
 **Just browse.** Open your TikTok profile, go to **Favorites**, scroll, open a collection. Every page TikTok loads for your own saved videos is read and stored automatically. Nothing happens on other people's pages.
 
-**Press Sync** in the side panel. Scroganize opens a separate window on TikTok, finds who you are, then scrolls your Favorites list and each collection to the end at a human pace (about a second between scrolls). A progress bar shows where it is. Keep that window visible: a hidden window cannot be scrolled, and the sync will wait for you to bring it back. You can pause, resume or cancel at any time; if Chrome or the extension restarts in the middle, the sync continues where it stopped.
+**Press Sync** in the side panel. Scrollganizer opens a separate window on TikTok, finds who you are, then scrolls your Favorites list and each collection to the end at a human pace (about a second between scrolls). A progress bar shows where it is. Keep that window visible: a hidden window cannot be scrolled, and the sync will wait for you to bring it back. You can pause, resume or cancel at any time; if Chrome or the extension restarts in the middle, the sync continues where it stopped.
 
 - The first sync reads everything. Later syncs are incremental: they stop after two pages with nothing new (so they take seconds).
 - Tick **Full re-sync** now and then. It also notices videos you have un-saved on TikTok (they stay in the library, marked "No longer saved") and collection memberships that no longer exist.
@@ -49,4 +49,4 @@ There are two ways, and they combine.
 
 - **The sync stops with "The list did not load".** Open the Favorites tab yourself in the sync window; the sync continues by itself once videos start arriving. Tell the developer which page you were on (`docs/LIVE_CHECKLIST.md`).
 - **"TikTok changed something, so some results may be incomplete."** TikTok added fields the extension has never seen. Search still works; some data may be missing until the parser is updated.
-- **Nothing appears while browsing.** Make sure you are on your own profile and signed in; look at `chrome://extensions`, Scroganize, "service worker" for errors.
+- **Nothing appears while browsing.** Make sure you are on your own profile and signed in; look at `chrome://extensions`, Scrollganizer, "service worker" for errors.

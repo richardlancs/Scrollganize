@@ -71,7 +71,7 @@ export function createRpcServer(deps: RpcServerDeps): (raw: unknown) => Promise<
     },
     exportData: () => deps.adapter().exportAll(),
     importData: async (p) => {
-      need(isObject(p) && p.format === 'scroganize-export', 'importData needs a Scroganize export bundle');
+      need(isObject(p) && p.format === 'scroganize-export', 'importData needs a Scrollganizer export bundle');
       await deps.adapter().importAll(p);
       return null;
     },

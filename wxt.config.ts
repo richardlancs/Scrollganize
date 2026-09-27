@@ -8,11 +8,11 @@ export default defineConfig({
   srcDir: 'src',
   entrypointsDir: 'extension/entrypoints',
   manifest: {
-    name: 'Scroganize',
+    name: 'Scrollganizer',
     description: 'Search your saved social-media collections.',
     minimum_chrome_version: '116',
     // The toolbar icon opens the side panel (see background.ts).
-    action: { default_title: 'Open Scroganize' },
+    action: { default_title: 'Open Scrollganizer' },
     // offscreen: hosts the dedicated Worker that owns the SQLite database.
     // unlimitedStorage: the DB lives in OPFS and can outgrow the default quota.
     // storage: capture counters and the resumable sync state live in chrome.storage.local; the data itself stays in SQLite.
