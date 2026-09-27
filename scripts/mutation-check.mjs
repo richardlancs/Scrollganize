@@ -3,7 +3,7 @@
 //   npm run mutate -- planner      # only mutations whose name contains "planner"
 //
 // A mutation the suite does NOT catch means a test is vacuous (or missing). The script fails loudly if a `find` string
-// is not present (so a refactor can never make a mutation silently do nothing) and ALWAYS restores the file afterwards.
+// is not present (so a refactor can never make a mutation silently do nothing) and always restores the file afterwards.
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
